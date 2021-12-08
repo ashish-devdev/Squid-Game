@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,7 +18,8 @@ public class GameManager : MonoBehaviour
     public static bool gameStarted;
     public static bool gameEnded;
     public GameObject singlePlayerCamera;
-    public GameObject multiplayerCamera; 
+    public GameObject multiplayerCamera;
+    public List<GameObject> detectonPannel;
 
     public UnityEvent onGameStart;
     public UnityEvent onGameEnds;
@@ -48,6 +50,11 @@ public class GameManager : MonoBehaviour
         {
             motionManager.playerControllers[i] = new PlayerController();
             motionManager.playerControllers[i] = playerControllers[i];
+        }
+
+        for (int i = 0; i < numberOfPlayer; i++)
+        {
+            detectonPannel[i].SetActive(true);
         }
 
         PositionCharecterBasedOnNumberOfPlayers();

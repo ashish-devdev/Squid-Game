@@ -257,6 +257,21 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114632238654788214, guid: b9cd8300939851b4782636fbc8c58f42,
+        type: 3}
+      propertyPath: modelJoints.Array.data[0].bone
+      value: 
+      objectReference: {fileID: 1669149283}
+    - target: {fileID: 114632238654788214, guid: b9cd8300939851b4782636fbc8c58f42,
+        type: 3}
+      propertyPath: modelJoints.Array.data[0].jointType
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114632238654788214, guid: b9cd8300939851b4782636fbc8c58f42,
+        type: 3}
+      propertyPath: modelJoints.Array.data[0].parentJointType
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9cd8300939851b4782636fbc8c58f42, type: 3}
 --- !u!1 &468561232 stripped
@@ -475,6 +490,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 11476714, guid: e999ace05c586574fa1b964016f28531, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e999ace05c586574fa1b964016f28531, type: 3}
+--- !u!4 &1669149283 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4805634221322930, guid: b9cd8300939851b4782636fbc8c58f42,
+    type: 3}
+  m_PrefabInstance: {fileID: 468561231}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2003542623
 GameObject:
   m_ObjectHideFlags: 0
