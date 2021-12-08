@@ -15,10 +15,12 @@ public class GameManager : MonoBehaviour
     public List<GameObject> charecters;
     public List<Position> charecterDefaultPosBasedOnNumberOfPlayers;
     public static bool gameStarted;
+    public static bool gameEnded;
     public GameObject singlePlayerCamera;
     public GameObject multiplayerCamera; 
 
     public UnityEvent onGameStart;
+    public UnityEvent onGameEnds;
 
     [System.Serializable]
     public class Position
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour
         PositionCharecterBasedOnNumberOfPlayers();
 
         gameStarted = false;
+        gameEnded = false;
 
     }
 
@@ -94,6 +97,8 @@ public class GameManager : MonoBehaviour
 
     public void MakeHeadRotateAfterIntervals()
     {
+        if (gameEnded)
+            return;
 
         try
         {

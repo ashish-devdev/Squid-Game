@@ -17,15 +17,29 @@ public class BotController : PlayerController
     float timer=0;
     int r;
     bool toggle;
-    public static bool isBotAllowedToMove;
+    public bool isBotAllowedToMove;
 
     // Update is called once per frame
     void Update()
     {
         r = Random.Range(1, 19);
 
+        if (GameManager.gameEnded && !crossesFinishLine)
+        {
+            p = 0;
+            AnimateCharcter();
+            return;
+        }
+
         if (!GameManager.gameStarted)
             return;
+
+        if (crossesFinishLine)
+        {
+            p = -0.5f;
+            AnimateCharcter();
+            return;
+        }
 
 
         if (isBotAllowedToMove)
@@ -34,6 +48,8 @@ public class BotController : PlayerController
 
             if (toggle)
             {
+                tiltAngle = Random.Range(-135f, -45f);
+
                 if (r % 3 == 0)
                 {
                     MakeBotRun();
@@ -63,6 +79,11 @@ public class BotController : PlayerController
         {
             p = 0f;
         }
+
+
+
+
+
 
         AnimateCharcter();
 

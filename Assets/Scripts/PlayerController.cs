@@ -37,8 +37,22 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.gameEnded && !crossesFinishLine)
+        {
+            p = 0;
+            AnimateCharcter();
+            return;
+        }
+
         if (!GameManager.gameStarted)
             return;
+
+        if (crossesFinishLine)
+        {
+            p = -0.5f;
+            AnimateCharcter();
+            return;
+        }
 
         if (isHumanMoving && shouldCharecterRun)
         {
@@ -53,12 +67,8 @@ public class PlayerController : MonoBehaviour
             p = 0f;
         }
 
-        if (crossesFinishLine)
-        {
-            p = -0.5f;
-            AnimateCharcter();
-            return;
-        }
+
+
 
 
         AnimateCharcter();

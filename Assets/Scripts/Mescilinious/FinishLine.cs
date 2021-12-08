@@ -1,10 +1,14 @@
-﻿using System.Collections;
+﻿using Lean.Gui;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FinishLine : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public RotateAround rotateAround;
+    public TranslateGameObject translateGameObject;
+    public GameManager gameManager;
+
     void Start()
     {
         
@@ -19,10 +23,16 @@ public class FinishLine : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
+
+
         if (collision.transform.tag == "Charecter")
         {
             collision.transform.GetComponent<PlayerController>().crossesFinishLine = true;
+            rotateAround.pivotObject = collision.transform.gameObject;
+            translateGameObject.target = collision.transform;
 
+            GameManager.gameEnded = true;
+            gameManager.onGameEnds.Invoke();
         }
 
 

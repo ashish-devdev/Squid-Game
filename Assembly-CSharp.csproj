@@ -155,7 +155,10 @@
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\Mescilinious\FinishLine.cs" />
     <Compile Include="Assets\Scripts\Mescilinious\FreezTheGameObjectFromRotation.cs" />
+    <Compile Include="Assets\Scripts\Mescilinious\MakeTextLookAtAvailableCamera.cs" />
     <Compile Include="Assets\Scripts\Mescilinious\OnThisGameObjectEnableAndDisable.cs" />
+    <Compile Include="Assets\Scripts\Mescilinious\RotateAround.cs" />
+    <Compile Include="Assets\Scripts\Mescilinious\TranslateGameObject.cs" />
     <Compile Include="Assets\Scripts\MotionManager.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimationController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
