@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BotManager : MonoBehaviour
@@ -38,6 +39,7 @@ public class BotManager : MonoBehaviour
             {
                 botsParent.transform.GetChild(r).gameObject.SetActive(true);
                 botControllers[i] = botsParent.transform.GetChild(r).GetChild(1).GetComponent<BotController>();
+                botsParent.transform.GetChild(r).GetChild(1).GetChild(0).GetComponent<TextMeshPro>().text = "Bot " + i;
             }
         }
 

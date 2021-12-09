@@ -26,6 +26,8 @@ MonoBehaviour:
           _Names: []
         _Speed: 1
         _Animations:
+        - {fileID: 7400000, guid: 552b5e3e59ef74a43a61bf94480da872, type: 2}
+        - {fileID: 7400000, guid: 7bc05840760d41142b78122e75f0247a, type: 2}
         - {fileID: 7400000, guid: bad6595e0049fcf408001359983dda12, type: 2}
         - {fileID: 7400000, guid: db34abff102afbd4d872d5103a2cea91, type: 2}
         - {fileID: 7400000, guid: d2b281023d45d794cb2de14bc96f2b52, type: 2}
@@ -33,6 +35,8 @@ MonoBehaviour:
         _Speeds: []
         _SynchronizeChildren: 
         _Thresholds:
+        - -1.5
+        - -1
         - -0.5
         - 0
         - 0.5
